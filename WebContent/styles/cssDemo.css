@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+#example1 {
+    background-image: url(img1.jpg);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    padding: 15px;
+}
+
+
+#grad1 {
+    height: 200px;
+    background: red; /* For browsers that do not support gradients */    
+    background: linear-gradient(to right, red , yellow); /* Standard syntax (must be last) */
+}
+
+#grad {
+	background: red;
+background: radial-gradient(circle, red, yellow, green); 
+}
+
+@font-face {
+   font-family: Aref Ruqaa, serif;
+}
+
+div {
+   font-family: Aref Ruqaa, serif;
+}
+
+div#example {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-iteration-count: 3;
+}
+
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.pagination li:first-child a {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pagination li:last-child a {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}

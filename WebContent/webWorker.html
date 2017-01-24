@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Web Workers basic example</title>
+
+    <link rel="stylesheet" href="./styles/webworker.css">
+     </head>
+
+  <body>
+   <div><h1>Web Workers example</h1></div> 
+
+    <div class="controls" tabindex="0">
+
+    <form>
+      <div>
+        <label for="number1">Multiply number 1: </label>    
+        <input type="text" id="number1" value="0">
+      </div>
+      <div>
+        <label for="number2">Multiply number 2: </label>   
+        <input type="text" id="number2" value="0">
+      </div>
+    </form>
+
+    <p class="result">Result: 0</p>
+
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
+ 
+    
+  </body>
+  
+  <script src="./scripts/webworker.js"></script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		crossorigin="anonymous"></script>
+<style>
+ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.selected {
+	background-color: #efefef;
+}
+</style>
+<script>
+	$(document).ready(function() {
+		$('body').on('click', 'li', function() {
+			$(this).toggleClass('selected');
+		});
+
+		$('#move_left').click(function() {
+			$('.list2 .selected').each(function() {
+				$('.list1').append('<li>' + $(this).text() + '</li>');
+			});
+			$('.list2 .selected').remove();
+		});
+
+		$('#move_right').click(function() {
+			$('.list1 .selected').each(function() {
+				$('.list2').append('<li>' + $(this).text() + '</li>');
+			});
+			$('.list1 .selected').remove();
+		});
+	});
+</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>Numbers</td>
+			<td>Letters</td>
+		</tr>
+		<tr>
+			<td>
+				<ul class='list1'>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+				</ul>
+			</td>
+			<td>
+				<ul class='list2'>
+					<li>a</li>
+					<li>b</li>
+					<li>c</li>
+					<li>d</li>
+					<li>e</li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	<input type='button' value='<<' id='move_left' />
+	<input type='button' value='>>' id='move_right' />
+
+	
+</body>
+</html>
